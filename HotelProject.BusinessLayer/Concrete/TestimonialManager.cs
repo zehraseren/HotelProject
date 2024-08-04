@@ -33,7 +33,7 @@ namespace HotelProject.BusinessLayer.Concrete
             _testimonialDal.Insert(t);
         }
 
-        public void Tupdate(Testimonial t)
+        public void TUpdate(Testimonial t)
         {
             _testimonialDal.Update(t);
         }

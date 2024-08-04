@@ -40,7 +40,7 @@ namespace HotelProject.WebAPI.Controllers
         [HttpPut]
         public IActionResult UpdateTestimonial(Testimonial testimonial)
         {
-            _testimonialService.Tupdate(testimonial);
+            _testimonialService.TUpdate(testimonial);
             return Ok();
         }
 

@@ -40,7 +40,7 @@ namespace HotelProject.WebAPI.Controllers
         [HttpPut]
         public IActionResult Updateroom(Room room)
         {
-            _roomService.Tupdate(room);
+            _roomService.TUpdate(room);
             return Ok();
         }
 

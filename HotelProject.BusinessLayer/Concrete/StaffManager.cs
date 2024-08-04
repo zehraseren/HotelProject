@@ -33,7 +33,7 @@ namespace HotelProject.BusinessLayer.Concrete
             _staffDal.Insert(t);
         }
 
-        public void Tupdate(Staff t)
+        public void TUpdate(Staff t)
         {
             _staffDal.Update(t);
         }

@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="bootstrap" Version="5.3.3" />
     <PackageReference Include="jQuery.BlockUI" Version="2.70.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />

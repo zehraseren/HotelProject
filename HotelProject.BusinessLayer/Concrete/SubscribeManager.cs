@@ -33,7 +33,7 @@ namespace HotelProject.BusinessLayer.Concrete
             _subscribeDal.Insert(t);
         }
 
-        public void Tupdate(Subscribe t)
+        public void TUpdate(Subscribe t)
         {
             _subscribeDal.Update(t);
         }
