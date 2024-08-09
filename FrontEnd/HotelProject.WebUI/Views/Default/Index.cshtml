@@ -29,7 +29,7 @@
         @await Component.InvokeAsync("_TeamPartial")
     </div>
 
-    @await Component.InvokeAsync("_SubscribePartial")
+    @await Html.PartialAsync("_SubscribePartial.cshtml")
 
     @await Component.InvokeAsync("_FooterPartial")
 

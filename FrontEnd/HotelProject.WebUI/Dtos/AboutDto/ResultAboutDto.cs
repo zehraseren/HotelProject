@@ -1,6 +1,6 @@
-﻿namespace HotelProject.EntityLayer.Concrete
+﻿namespace HotelProject.WebUI.Dtos.AboutDto
 {
-    public class About
+    public class ResultAboutDto
     {
         public int AboutID { get; set; }
         public string? Title1 { get; set; }
