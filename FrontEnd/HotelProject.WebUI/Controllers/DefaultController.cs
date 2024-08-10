@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text;
+using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 using HotelProject.WebUI.Dtos.SubscribeDto;
-using System.Text;
 
 namespace HotelProject.WebUI.Controllers
 {
