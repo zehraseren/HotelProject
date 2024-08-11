@@ -1,3 +1,4 @@
 1) Api Tests and Swagger
 2) Add theme
 3) Register & Login
+4) Onay Bekliyor/Onaylandý/Ýptal Edildi/Bekletiliyor butonlarý
