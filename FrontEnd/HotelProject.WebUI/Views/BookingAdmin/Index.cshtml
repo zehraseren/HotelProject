@@ -36,7 +36,7 @@
                         <td>@(((DateTime)item.CheckIn).ToString("dd-MMM-yyyy"))</td>
                         <td>@(((DateTime)item.CheckOut).ToString("dd-MMM-yyyy"))</td>
                         <td><span class="badge badge-secondary text-white px-2">@item.Status</span></td>
-                        <td><a href="#" class="btn btn-outline-primary">Onayla</a></td>
+                        <td><a href="/BookingAdmin/ApprovedReservation/@item.BookingID/" class="btn btn-outline-primary">Onayla</a></td>
                         <td><a href="#" class="btn btn-outline-danger">İptal Et</a></td>
                         <td><a href="#" class="btn btn-outline-warning">Beklet</a></td>
                         <td><a href="#" class="btn btn-outline-success">Güncelle</a></td>
