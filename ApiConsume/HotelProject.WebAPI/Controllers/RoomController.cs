@@ -16,21 +16,21 @@ namespace HotelProject.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult roomList()
+        public IActionResult RoomList()
         {
             var values = _roomService.TGetList();
             return Ok(values);
         }
 
         [HttpPost]
-        public IActionResult Addroom(Room room)
+        public IActionResult AddRoom(Room room)
         {
             _roomService.TInsert(room);
             return Ok();
         }
 
         [HttpDelete]
-        public IActionResult Deleteroom(int id)
+        public IActionResult DeleteRoom(int id)
         {
             var values = _roomService.TGetByID(id);
             _roomService.TDelete(values);
@@ -38,14 +38,14 @@ namespace HotelProject.WebAPI.Controllers
         }
 
         [HttpPut]
-        public IActionResult Updateroom(Room room)
+        public IActionResult UpdateRoom(Room room)
         {
             _roomService.TUpdate(room);
             return Ok();
         }
 
         [HttpGet("{id}")]
-        public IActionResult Getroom(int id)
+        public IActionResult GetRoom(int id)
         {
             var values = _roomService.TGetByID(id);
             return Ok(values);

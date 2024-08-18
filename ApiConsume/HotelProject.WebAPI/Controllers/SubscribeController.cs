@@ -16,21 +16,21 @@ namespace HotelProject.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult subscribeList()
+        public IActionResult SubscribeList()
         {
             var values = _subscribeService.TGetList();
             return Ok(values);
         }
 
         [HttpPost]
-        public IActionResult Addsubscribe(Subscribe subscribe)
+        public IActionResult AddSubscribe(Subscribe subscribe)
         {
             _subscribeService.TInsert(subscribe);
             return Ok();
         }
 
         [HttpDelete]
-        public IActionResult Deletesubscribe(int id)
+        public IActionResult DeleteSubscribe(int id)
         {
             var values = _subscribeService.TGetByID(id);
             _subscribeService.TDelete(values);
@@ -38,14 +38,14 @@ namespace HotelProject.WebAPI.Controllers
         }
 
         [HttpPut]
-        public IActionResult Updatesubscribe(Subscribe subscribe)
+        public IActionResult UpdateSubscribe(Subscribe subscribe)
         {
             _subscribeService.TUpdate(subscribe);
             return Ok();
         }
 
         [HttpGet("{id}")]
-        public IActionResult Getsubscribe(int id)
+        public IActionResult GetSubscribe(int id)
         {
             var values = _subscribeService.TGetByID(id);
             return Ok(values);

@@ -16,21 +16,21 @@ namespace HotelProject.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult aboutList()
+        public IActionResult AboutList()
         {
             var values = _aboutService.TGetList();
             return Ok(values);
         }
 
         [HttpPost]
-        public IActionResult Addabout(About about)
+        public IActionResult AddAbout(About about)
         {
             _aboutService.TInsert(about);
             return Ok();
         }
 
         [HttpDelete]
-        public IActionResult Deleteabout(int id)
+        public IActionResult DeleteAbout(int id)
         {
             var values = _aboutService.TGetByID(id);
             _aboutService.TDelete(values);
@@ -38,14 +38,14 @@ namespace HotelProject.WebAPI.Controllers
         }
 
         [HttpPut]
-        public IActionResult Updateabout(About about)
+        public IActionResult UpdateAbout(About about)
         {
             _aboutService.TUpdate(about);
             return Ok();
         }
 
         [HttpGet("{id}")]
-        public IActionResult Getabout(int id)
+        public IActionResult GetAbout(int id)
         {
             var values = _aboutService.TGetByID(id);
             return Ok(values);
