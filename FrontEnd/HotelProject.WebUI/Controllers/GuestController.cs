@@ -36,15 +36,23 @@ namespace HotelProject.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddGuest(CreateGuestDto cgdto)
         {
-            var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(cgdto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var response = await client.PostAsync("http://localhost:5200/api/Guest/", stringContent);
-            if (response.IsSuccessStatusCode)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index");
+
+                var client = _httpClientFactory.CreateClient();
+                var jsonData = JsonConvert.SerializeObject(cgdto);
+                StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync("http://localhost:5200/api/Guest/", stringContent);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index");
+                }
+                return View();
             }
-            return View();
+            else
+            {
+                return View();
+            }
         }
 
         public async Task<IActionResult> DeleteGuest(int id)
@@ -75,15 +83,22 @@ namespace HotelProject.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateGuest(UpdateGuestDto ugdto)
         {
-            var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(ugdto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var response = await client.PutAsync("http://localhost:5200/api/Guest/", stringContent);
-            if (response.IsSuccessStatusCode)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index");
+                var client = _httpClientFactory.CreateClient();
+                var jsonData = JsonConvert.SerializeObject(ugdto);
+                StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                var response = await client.PutAsync("http://localhost:5200/api/Guest/", stringContent);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index");
+                }
+                return View();
             }
-            return View();
+            else
+            {
+                return View();
+            }
         }
     }
 }
