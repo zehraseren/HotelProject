@@ -2,6 +2,8 @@
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 using HotelProject.WebUI.Dtos.ContactDto;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using HotelProject.WebUI.Dtos.MessageCategoryDto;
 
 namespace HotelProject.WebUI.Controllers
 {
@@ -14,11 +16,22 @@ namespace HotelProject.WebUI.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync("http://localhost:5200/api/MessageCategory/");
+
+            var jsonData = await response.Content.ReadAsStringAsync();
+            var values = JsonConvert.DeserializeObject<List<ResultMessageCategoryDto>>(jsonData);
+            List<SelectListItem> values2 = (from x in values
+                                            select new SelectListItem
+                                            {
+                                                Text = x.MessageCategoryName,
+                                                Value = x.MessageCategoryID.ToString()
+                                            }).ToList();
+            ViewBag.v = values2;
             return View();
         }
-
 
         [HttpGet]
         public PartialViewResult SendMessage()
