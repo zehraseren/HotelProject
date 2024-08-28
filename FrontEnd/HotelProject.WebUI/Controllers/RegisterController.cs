@@ -35,6 +35,7 @@ namespace HotelProject.WebUI.Controllers
                 Surname = cnudto.Surname,
                 Email = cnudto.Mail,
                 UserName = cnudto.Username,
+                WorkLocationID = 1
             };
             var result = await _userManager.CreateAsync(appUser, cnudto.Password);
             if (result.Succeeded)
