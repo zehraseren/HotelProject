@@ -1,4 +1,4 @@
-﻿@model List<ResultAppUserListDto>
+﻿@model List<ResultAppUserWithWorkLocationDto>
 
 @{
     ViewData["Title"] = "UserList";
@@ -12,6 +12,7 @@
                 <thead>
                     <tr>
                         <th>Kullanıcı</th>
+                        <th>Çalıştığı Şube</th>
                         <th>Şehir</th>
                         <th>Ülke</th>
                         <th>Durum</th>
@@ -23,6 +24,7 @@
                     {
                         <tr>
                             <td><img src="@item.ImageUrl" class=" rounded-circle mr-3" alt="">@item.Name @item.Surname</td>
+                            <td>@item.WorkLocationName</td>
                             <td>@item.City</td>
                             <td>
                                 <span>@item.Country</span>

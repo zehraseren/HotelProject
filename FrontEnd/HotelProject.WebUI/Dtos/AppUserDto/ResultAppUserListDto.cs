@@ -1,4 +1,6 @@
-﻿namespace HotelProject.WebUI.Dtos.AppUserDto
+﻿using HotelProject.EntityLayer.Concrete;
+
+namespace HotelProject.WebUI.Dtos.AppUserDto
 {
     public class ResultAppUserListDto
     {
