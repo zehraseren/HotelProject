@@ -13,6 +13,11 @@ namespace HotelProject.BusinessLayer.Concrete
             _appUserDal = appUserDal ?? throw new ArgumentNullException(nameof(appUserDal));
         }
 
+        public int TAppUserCount()
+        {
+            return _appUserDal.AppUserCount();
+        }
+
         public void TDelete(AppUser t)
         {
             _appUserDal.Delete(t);

@@ -2,9 +2,11 @@
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 using HotelProject.WebUI.Dtos.BookingDto;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HotelProject.WebUI.Controllers
 {
+    [AllowAnonymous]
     public class BookingController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
