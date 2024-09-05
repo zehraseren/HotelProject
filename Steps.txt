@@ -3,3 +3,4 @@
 3) Register & Login
 4) Onay Bekliyor/Onaylandý/Ýptal Edildi/Bekletiliyor butonlarý
 5) Copy button
+6) Rol bazlý yetkilendirme
