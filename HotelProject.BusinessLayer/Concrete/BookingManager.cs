@@ -13,14 +13,19 @@ namespace HotelProject.BusinessLayer.Concrete
             _bookingDal = bookingDal ?? throw new ArgumentNullException(nameof(bookingDal));
         }
 
-        public void TBookingStatusChangeApproved(Booking booking)
+        public void TBookingStatusChangeApproved(int id)
         {
-            _bookingDal.BookingStatusChangeApproved(booking);
+            _bookingDal.BookingStatusChangeApproved(id);
         }
 
-        public void TBookingStatusChangeApproved2(int id)
+        public void TBookingStatusChangeCancelled(int id)
         {
-            _bookingDal.BookingStatusChangeApproved2(id);
+            _bookingDal.BookingStatusChangeCancelled(id);
+        }
+
+        public void TBookingStatusChangeWaiting(int id)
+        {
+            _bookingDal.BookingStatusChangeWaiting(id);
         }
 
         public void TDelete(Booking t)
